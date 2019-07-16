@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<form method="POST" class="post-form" action="/update/{{contactData.id}}">
+    {% csrf_token %}  
+    <br>
+    <label>Contact</label><br>
+    <input type="text" name="cid" value="{{ contactData.cid }}"/>  
+    <br>
+
+    <label>Name</label><br>
+    <input type="text" name="name" value="{{ contactData.name }}" />  
+    <br>
+
+    <label>Email</label><br>
+    <input type="email" name="email" value="{{ contactData.email }}" />  
+    <br>
+    
+    <label>Phone</label><br>
+    <input type="text" name="phone" value="{{ contactData.phone }}" />  
+    <br>
+    <button type="submit">Submit</button>  
+</form>  
+{% endblock %}
