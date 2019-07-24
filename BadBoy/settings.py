@@ -25,7 +25,7 @@ SECRET_KEY = '=c-3h%vysca$*o1*^&+$cc!i3+46mjjpzy5@cs$js4su)75kp^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['13.126.5.80']
 
 
 # Application definition
@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'BadBoy.wsgi.application'
 DATABASES = {
     #SQLite3 Default Database Engine
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django',
+        'USER': 'badboy',
+        'PASSWORD': 'Parrot17!00',
+        'HOST': '127.0.0.1', 
+        'PORT': '',
     }
 }
 
